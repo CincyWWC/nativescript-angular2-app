@@ -1,32 +1,13 @@
-import { NativeScriptModule } from "nativescript-angular/platform";
-import { NgModule } from "@angular/core";
-import { NativeScriptRouterModule } from "nativescript-angular/router";
+import { NativeScriptModule } from "nativescript-angular/platform"
+import { NgModule } from "@angular/core"
 
-import { authProviders, appRoutes } from "./app.routing";
-import { AppComponent } from "./app.component";
-import { setStatusBarColors, BackendService, LoginService } from "./shared";
-
-import { LoginModule } from "./login/login.module";
-import { GroceriesModule } from "./groceries/groceries.module";
-
-setStatusBarColors();
+import { AppComponent } from "./app.component"
 
 @NgModule({
-  providers: [
-    BackendService,
-    LoginService,
-    authProviders
-  ],
-  imports: [
-    NativeScriptModule,
-    NativeScriptRouterModule,
-    NativeScriptRouterModule.forRoot(appRoutes),
-    LoginModule,
-    GroceriesModule,
-  ],
-  declarations: [
-      AppComponent,
-  ],
+  imports: [NativeScriptModule],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
+

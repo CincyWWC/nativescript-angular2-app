@@ -1,7 +1,9 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core'
 
 @Component({
-  selector: "gr-main",
-  template: "<page-router-outlet></page-router-outlet>"
-})
+  selector: 'my-app',
+  template: '<Label text="Hello Toshi"></Label>'
+  })
+
 export class AppComponent { }
+
